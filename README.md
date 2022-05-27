@@ -1,5 +1,5 @@
 # Проект: Место
-https://tatianazavyalova.github.io/russian-travel/index.html
+https://tatianazavyalova.github.io/mesto/index.html
 ## Проектная работа 4
 ### Описание проекта:
 * **Цель работы**. Целью данной работы является закрепление навыков, приобретенных на курсе.

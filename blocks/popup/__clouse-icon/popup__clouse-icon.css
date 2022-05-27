@@ -1,0 +1,14 @@
+.popup__clouse-icon {
+  max-width: 32px;
+}
+
+.popup__clouse-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .popup__clouse-icon {
+    width: 20px;
+  }
+}

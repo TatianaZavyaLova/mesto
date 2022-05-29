@@ -2,15 +2,16 @@
   border: 1px solid white;
   width: 24px;
   height: 24px;
-  align-items: center;
-  justify-content: center;
   display: flex;
   margin: 0 0 0 18px;
-  background: none;
+  background-image: url(../../../images/Vector.svg);
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
   padding: 0;
 }
 
-@media screen and (max-width: 767px) and (min-width: 320px) {
+@media screen and (max-width: 767px) {
   .profile__edit-button {
     margin: 0 0 0 10px;
     width: 18px;
@@ -19,6 +20,6 @@
 }
 
 .profile__edit-button:hover {
-  opacity: 0.8;
+  opacity: 0.6;
   cursor: pointer;
 }

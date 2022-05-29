@@ -1,6 +1,7 @@
 .card__group {
   display: flex;
-  padding: 25px 30px 31px 21px;
-  justify-content: space-between;
+  height: 79px;
+  padding: 0;
   align-items: center;
+  justify-content: space-between;
 }

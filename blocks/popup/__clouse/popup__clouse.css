@@ -6,11 +6,19 @@
   top: -40px;
   right: -40px;
   padding: 0;
-  background: none;
+  background-image: url(../../../images/Close\ Icon.svg);
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  background-position: center;
   border: none;
 }
- 
-@media screen and (max-width: 767px) and (min-width: 320px) {
+
+.popup__clouse:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
   .popup__clouse {
     width: 20px;
     height: 20px;

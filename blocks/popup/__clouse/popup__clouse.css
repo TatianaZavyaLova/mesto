@@ -8,6 +8,7 @@
   padding: 0;
   background-image: url(../../../images/Close\ Icon.svg);
   background-repeat: no-repeat;
+  background-size: 32px;
   background-color: rgba(0, 0, 0, 0);
   background-position: center;
   border: none;
@@ -22,6 +23,7 @@
   .popup__clouse {
     width: 20px;
     height: 20px;
+    background-size: 20px;
     top: -36px;
     right: 0;
   }

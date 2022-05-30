@@ -6,6 +6,7 @@
   margin: 0 0 0 18px;
   background-image: url(../../../images/Vector.svg);
   background-repeat: no-repeat;
+  background-size: 10px;
   background-color: black;
   background-position: center;
   padding: 0;
@@ -16,6 +17,7 @@
     margin: 0 0 0 10px;
     width: 18px;
     height: 18px;
+    background-size: 7.5px;
   }
 }
 

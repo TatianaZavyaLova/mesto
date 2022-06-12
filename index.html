@@ -24,62 +24,7 @@
         </div>
         <button class="profile__add-button" type="button"></button>
       </section>
-      <section class="cards">
-        <div class="card">
-          <img src="./images/karachaevsk.png" alt="Карачаево-Черкессия" class="card__image">
-          <div class="card__group">
-            <h2 class="card__title">
-              Карачаево-Черкессия
-            </h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/elbrus.png" alt="Эльбрус" class="card__image">
-          <div class="card__group">
-            <h2 class="card__title">
-              Гора Эльбрус
-            </h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/dombai.png" alt="Домбай" class="card__image">
-          <div class="card__group">
-            <h2 class="card__title">
-              Домбай
-            </h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/cape-elizabeth-1.png" alt="Порт Элизабет" class="card__image">
-          <div class="card__group">
-            <h2 class="card__title">
-              Порт Элизабет
-            </h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/cape-town-1.png" alt="Кейп-Таун" class="card__image">
-          <div class="card__group">
-            <h2 class="card__title">
-              Кейп-Таун
-            </h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./images/maldivi-1.png" alt="Мальдивы" class="card__image">
-          <div class="card__group">
-            <h2 class="card__title">
-              Мальдивы
-            </h2>
-            <button class="card__like" type="button"></button>
-          </div>
-        </div>
-      </section>
+      <section class="cards"></section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">
@@ -101,7 +46,41 @@
         </form>
       </div>
     </div>
+    <div class="add-popup">
+      <div class="add-popup__container">
+        <button class="add-popup__clouse" type="button"></button>
+        <h3 class="add-popup__title">
+          Новое место
+        </h3>
+        <form name="form" class="add-popup__form">
+          <input type="text" name="place" class="add-popup__input add-popup__input_type_place" placeholder="Название">
+          <input type="text" name="image" class="add-popup__input add-popup__input_type_image" placeholder="Ссылка на картинку">
+          <button type="submit" class="add-popup__button">
+            Создать
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="image-popup">
+      <div class="image-popup__container">
+        <button class="image-popup__clouse" type="button"></button>
+        <h3 class="image-popup__title">
+          Новое место
+        </h3>
+        <img src="#" alt="Фото" class="image-popup__image">
+      </div>
+    </div>
   </div>
+  <template class="cards-template">
+    <div class="card">
+      <img src="#" alt="Фото" class="card__image">
+      <button class="card__trash" type="button"></button>
+      <div class="card__group">
+        <h2 class="card__title"></h2>
+        <button class="card__like" type="button"></button>
+      </div>
+    </div>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 </html>

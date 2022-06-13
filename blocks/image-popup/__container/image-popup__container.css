@@ -1,3 +1,24 @@
 .image-popup__container {
-    
+  position: relative;
+  max-width: 860px;
+  height: 562px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid salmon;
+  margin: auto auto;
+  top: 90px;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .image-popup__container {
+    max-width: 564px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .image-popup__container {
+    max-width: 240px;
+    height: 321px;
+    top: 136px;
+  }
 }

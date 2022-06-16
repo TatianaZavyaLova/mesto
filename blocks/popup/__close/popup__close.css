@@ -1,4 +1,4 @@
-.popup__clouse {
+.popup__close {
   position: absolute;
   display: flex;
   width: 32px;
@@ -14,13 +14,13 @@
   border: none;
 }
 
-.popup__clouse:hover {
+.popup__close:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-  .popup__clouse {
+  .popup__close {
     width: 20px;
     height: 20px;
     background-size: 20px;

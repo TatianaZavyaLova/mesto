@@ -16,11 +16,10 @@ const addCardInput = document.querySelector('.add-popup__input_type_place')
 const addCardImage = document.querySelector('.add-popup__input_type_image')
 const cardElement = document.querySelector('.cards')
 const templateElement = document.querySelector('.cards-template')
-const like = document.querySelector('.card__like')
-const likeActive = document.querySelector('.card__like_active')
 const imagePopup = document.querySelector('.image-popup')
 const closeImagePopupButton = document.querySelector('.image-popup__close')
 const imagePopupPhoto = document.querySelector('.image-popup__image')
+const imagePopupTitle = document.querySelector('.image-popup__title')
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -59,7 +58,6 @@ function createCard(name, link) {
 function addCard(name, link) {
   const card = createCard(name, link);
   cardElement.prepend(card);
-  formAddElement.reset(name, link);
 };
 
 function handleCardSubmit(e) {
@@ -68,6 +66,7 @@ function handleCardSubmit(e) {
   const link = addCardImage.value;
   addCard(name, link);
   closePopup(addPopup);
+  formAddElement.reset();
 };
 
 initialCards.forEach(e => addCard(e.name, e.link));
@@ -76,9 +75,9 @@ formAddElement.addEventListener('submit', handleCardSubmit);
 
 function openImagePopup(name, imageURL) {
   openPopup(imagePopup);
-  imagePopup.querySelector('.image-popup__image').src = imageURL;
-  imagePopup.querySelector('.image-popup__image').alt = name;
-  imagePopup.querySelector('.image-popup__title').textContent = name;
+  imagePopupPhoto.src = imageURL;
+  imagePopupPhoto.alt = name;
+  imagePopupTitle.textContent = name;
 };
 
 closeImagePopupButton.addEventListener('click', () => closePopup(imagePopup));
@@ -86,11 +85,6 @@ closeImagePopupButton.addEventListener('click', () => closePopup(imagePopup));
 addButton.addEventListener('click', () => openPopup(addPopup));
 
 closeAddPopupButton.addEventListener('click', () => closePopup(addPopup));
-
-function addFormSubmitHandler (evt) {
-  evt.preventDefault();
-  closePopup(addPopup);
-};
 
 function openPopupProfile() {
   openPopup(popupProfileEdit);

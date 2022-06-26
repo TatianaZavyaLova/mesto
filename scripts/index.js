@@ -29,10 +29,6 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }; 
 
-function getCard(e) {
-  return e.currentTarget.closest('.card');
-};
-
 function createCard(name, link) {
   const card = templateElement.content
   .cloneNode(true)

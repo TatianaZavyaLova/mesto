@@ -1,5 +1,5 @@
-const submitProfileButton = document.querySelector('.popup__button');
-const inputList = Array.from(document.querySelectorAll('.popup__input'));
+const popupProfileInputElements = Array.from(document.querySelectorAll('.popup__input'));
+const popupProfileSubmit = document.querySelector('.popup__button');
 const selectors = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
@@ -7,44 +7,48 @@ const selectors = {
   inactiveButtonClass: 'popup__button_disabled',
   inputErrorClass: 'popup__input_type_error',
   errorClass: 'popup__error_visible'
+};
+
+
+function getCard(e) {
+  return e.currentTarget.closest('.card');
+};
+
+
+
+function getErrorElementForInputElement(inputElement)
+{
+  return document.getElementById("error-" + inputElement.id);
 }
 
-const isInputValid = inputElement => {
-    return inputElement.checkValidity();
+function setErrorForInputElement(inputElement)
+{
+  getErrorElementForInputElement(inputElement).innerText = inputElement.validationMessage;
 }
 
-const activateError = (errorElement, message) => {
-    const inputElement = errorElement.closest('.popup__input');
-    inputElement.classList.add('popup__input__invalid');
-    errorElement.textContent = message;
+function clearErrorForInputElement(inputElement)
+{
+  getErrorElementForInputElement(inputElement).innerText = "";
 }
 
-const resetError = (errorElement) => {
-    const inputElement = errorElement.closest('.popup__input');
-    inputElement.classList.remove('popup__input__invalid');
-    errorElement.textContent = " ";
+function validateForm(inputElements, submitElement)
+{
+  let isValid = true;
+
+  inputElements.forEach((inputElement) =>
+    {
+      if (!inputElement.checkValidity())
+      {
+        setErrorForInputElement(inputElement);
+        isValid = false;
+      }
+      else
+      {
+        clearErrorForInputElement(inputElement);
+      }
+    });
+
+  submitElement.disabled = !isValid;
 }
 
-submitProfileButton.addEventListener('click', () => {
-  let isFormValid = true;
-
-  inputList.forEach(inputElement => {
-    const errorElement = document.querySelector(`error-${inputElement.id}`);
-
-    if (!isInputValid(inputElement)) {
-        isFormValid = false;
-        activateError(errorElement, inputElement.validationMessage);
-    } else {
-        resetError(errorElement);
-    }
-  });
-  console.log(isFormValid);
-})
-
-function enableValidation(selectors) {
-
-}
-
-enableValidation(selectors);
-
-
+formProfileElement.addEventListener('input', () => validateForm(popupProfileInputElements, popupProfileSubmit));

@@ -29,6 +29,10 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }; 
 
+function getCard(e) {
+  return e.currentTarget.closest('.card');
+};
+
 function createCard(name, link) {
   const card = templateElement.content
   .cloneNode(true)
@@ -100,3 +104,24 @@ function handleProfileFormSubmit (evt) {
 };
 
 formProfileElement.addEventListener('submit', handleProfileFormSubmit);
+
+/*function closeByOverLay (popup) {
+  popup.addEventListener('click', () => closePopup(popup));
+};
+
+closeByOverLay(popupProfileEdit);
+
+closeByOverLay(addPopup);*/
+
+function closeByEsc (popup) {
+  document.addEventListener('keydown', (event) => {
+    const key = event.key;
+    if (key === "Escape") {
+      closePopup(popup);
+    }
+  });
+};
+
+closeByEsc(popupProfileEdit);
+
+closeByEsc(addPopup);

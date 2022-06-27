@@ -1,6 +1,6 @@
-.error-message {
+.popup__error_visible {
   font-size: 12px;
-  height: 20px;
+  line-height: 100%;
   justify-self: flex-start;
   color: red;
   margin: 5px auto 13px 36px;

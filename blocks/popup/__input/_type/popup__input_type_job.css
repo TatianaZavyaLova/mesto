@@ -6,15 +6,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  margin-bottom: 30px;
+  margin: 10px auto 0 auto;
 }
 
 @media screen and (max-width: 767px) {
   .popup__input_type_job {
     max-width: 238px;
   }
-}
-
-.popup__input_type_job:invalid {
-  margin: 0;
 }

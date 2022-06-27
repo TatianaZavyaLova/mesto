@@ -55,11 +55,11 @@
           Новое место
         </h3>
         <form name="form" class="add-popup__form" novalidate>
-          <input required id="place" type="text" minlength="2" maxlength="30" name="place" class="add-popup__input_type_place" placeholder="Название">
+          <input required id="place" type="text" minlength="2" maxlength="30" name="place" class="add-popup__input add-popup__input_type_place" placeholder="Название">
           <span id="error-place" class="error-message error-message__hidden"></span>
-          <input required id="image" type="url" name="image" class="add-popup__input_type_image" placeholder="Ссылка на картинку">
+          <input required id="image" type="url" name="image" class="add-popup__input add-popup__input_type_image" placeholder="Ссылка на картинку">
           <span id="error-image" class="error-message error-message__hidden"></span>
-          <button type="submit" class="add-popup__button">
+          <button type="submit" class="add-popup__button add-popup__button_disabled" disabled>
             Создать
           </button>
         </form>

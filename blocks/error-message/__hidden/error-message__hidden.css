@@ -1,3 +1,6 @@
 .error-message__hidden {
-    margin: 0;
+    font-size: 12px;
+    height: 20px;
+    justify-self: flex-start;
+    margin: 5px auto 13px 36px;
   }

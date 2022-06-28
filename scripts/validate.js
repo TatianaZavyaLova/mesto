@@ -4,7 +4,7 @@ const profileFormConfig = {
   submitButtonSelector: '.popup__button',
   inactiveButtonClass: 'popup__button_disabled',
   inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__error_visible'
+  errorClass: 'popup__error-message_visible'
 };
 
 const addFormConfig = {
@@ -13,7 +13,7 @@ const addFormConfig = {
   submitButtonSelector: '.add-popup__button',
   inactiveButtonClass: 'add-popup__button_disabled',
   inputErrorClass: 'add-popup__input_type_error',
-  errorClass: 'add-popup__error_visible'
+  errorClass: 'add-popup__error-message_visible'
 };
 
 function getErrorElementForInputElement(inputElement) {

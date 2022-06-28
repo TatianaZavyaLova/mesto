@@ -1,7 +1,6 @@
-.popup__error_visible {
+.add-popup__error-message_hidden {
   font-size: 12px;
-  line-height: 100%;
+  height: 20px;
   justify-self: flex-start;
-  color: red;
   margin: 5px auto 13px 36px;
 }

@@ -48,7 +48,7 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__error-message/popup__error-message_hidden.css);
 @import url(../blocks/popup/__error-message/popup__error-message_visible.css);
-@import url(../blocks/add-popup/__error-message/add-popup__error-message_hidden.css);
-@import url(../blocks/add-popup/__error-message/add-popup__error-message_visible.css);
+@import url(../blocks/add-popup/__error-message/_hidden/add-popup__error-message_hidden.css);
+@import url(../blocks/add-popup/__error-message//_visible/add-popup__error-message_visible.css);
 @import url(../blocks/popup/__input/_type/popup__input_type_error.css);
 @import url(../blocks/add-popup/__input/_type/add-popup__input_type_error.css);
